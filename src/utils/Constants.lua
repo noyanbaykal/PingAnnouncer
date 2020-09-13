@@ -1,11 +1,4 @@
-# PingAnnouncer
-A World of Warcraft Classic addon that helps you let your party members know what you're pinging in your minimap.
-
-The addon will send a message to party chat with the tooltip text of what you clicked on in your minimap and the ping's direction with respect to your character.
-
-A message will be sent only if you are in a party and click on your minimap while there is a tooltip text visible to you. No messages will be sent if you are in a raid.
-
-### License
+--[[
 PingAnnouncer is a World of Warcraft addon that lets your party members know you've pinged an object of interest.
 
 Copyright (C) 2020  Melik Noyan Baykal
@@ -22,3 +15,23 @@ GNU Affero General Public License for more details.
 
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
+]]
+
+-- All addons share the global namespace and global name conflicts are possible.
+-- Bundling all constants in a single object to avoid possible conflicts.
+PA_C = {}
+
+PA_C.DIRECTION_MARGIN = 0.02
+
+PA_C.NAME = 'PingAnnouncer'
+
+PA_C.UIOBJECT_TYPE = 'Frame'
+PA_C.GAME_TOOLTIP = 'GameTooltipTextLeft1'
+PA_C.PLAYER = 'player'
+PA_C.PARTY_CHAT = 'PARTY'
+
+PA_C.CVAR_ROTATE_MINIMAP = 'rotateMinimap'
+PA_C.ATTR_ON_EVENT = 'OnEvent'
+PA_C.EVENT_MINIMAP_PING = 'MINIMAP_PING'
+
+return PA_C
