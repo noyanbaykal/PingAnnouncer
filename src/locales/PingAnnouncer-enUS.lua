@@ -19,6 +19,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 PA_L = {}
 
+PA_L.TXT_NOT_CLASSIC = 'PingAnnouncer supports classic only!'
 PA_L.PINGED = 'Pinged'
 PA_L.NEARBY = 'in the immediate vicinity!'
 PA_L.DIRECTION = 'to the'

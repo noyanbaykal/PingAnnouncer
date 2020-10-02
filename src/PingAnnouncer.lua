@@ -93,7 +93,7 @@ end
 -- The addon entry is right here
 local isClassic = WOW_PROJECT_ID == WOW_PROJECT_CLASSIC
 if not isClassic then
-  DEFAULT_CHAT_FRAME:AddMessage(PPF_L.TXT_NOT_CLASSIC)
+  DEFAULT_CHAT_FRAME:AddMessage(PA_L.TXT_NOT_CLASSIC)
   return
 end
 
