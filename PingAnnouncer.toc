@@ -15,9 +15,9 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-## Interface: 11305
+## Interface: 11306
 ## Title: PingAnnouncer
-## Version: 1.0.1
+## Version: 1.0.2
 ## Notes: Lets your party members know what object you pinged.
 
 src\locales\PingAnnouncer-enUS.lua
