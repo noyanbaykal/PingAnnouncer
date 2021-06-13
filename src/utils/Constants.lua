@@ -22,6 +22,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 PA_C = {}
 
 PA_C.DIRECTION_MARGIN = 0.02
+PA_C.MINIMUM_SECONDS = 4
 
 PA_C.NAME = 'PingAnnouncer'
 

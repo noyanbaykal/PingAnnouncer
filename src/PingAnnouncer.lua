@@ -76,7 +76,7 @@ local function handlePing(unitId, x, y)
 
   -- Throttle if needed
   local currentTime = time()
-  if(LAST_PING_TIME == currentTime) then
+  if(currentTime - LAST_PING_TIME < PA_C.MINIMUM_SECONDS) then
     return
   else
     LAST_PING_TIME = currentTime
@@ -91,13 +91,14 @@ local function handlePing(unitId, x, y)
 end
 
 -- The addon entry is right here
-local isClassic = WOW_PROJECT_ID == WOW_PROJECT_CLASSIC
+local isClassic = WOW_PROJECT_ID == WOW_PROJECT_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC
 if not isClassic then
   DEFAULT_CHAT_FRAME:AddMessage(PA_L.TXT_NOT_CLASSIC)
   return
 end
 
 local PingAnnouncer = CreateFrame(PA_C.UIOBJECT_TYPE, PA_C.GA_NAME, UIParent)
+LAST_PING_TIME = time()
 
 PingAnnouncer:RegisterEvent(PA_C.EVENT_MINIMAP_PING)
 
