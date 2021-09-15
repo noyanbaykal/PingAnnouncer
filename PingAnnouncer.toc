@@ -17,7 +17,7 @@
 
 ## Interface: 11307
 ## Title: PingAnnouncer
-## Version: 1.0.3
+## Version: 1.0.4
 ## Notes: Lets your party members know what object you pinged.
 
 src\locales\PingAnnouncer-enUS.lua
